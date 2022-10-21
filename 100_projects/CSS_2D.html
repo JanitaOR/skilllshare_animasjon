@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS animasjon-100 projects</title>
+        <meta name="Description" content="100 projects">
+        <style>
+            img {
+                width: 200px;
+                display: block;
+                margin: auto;
+                margin-top: 200px;
+                transition: transform 2s;
+                /*transform-origin:  top;     brukes når et bilde skal f.eks. rotere fra et annet punkt enn i senter
+                transform-origin: 30% 30%;      prosent kan gi posisjon hvor bildet skal rotere*/
+            }
+
+            p {
+                font-size: 30px;
+                display: block;
+                text-align: center;
+                margin-top: 200px;
+
+            }
+
+            .translate:hover {
+               /*
+               transform: translateX(300px);            300px til høyre
+               transform: translateX(-300px);           300px til venstre
+              
+               transform: translateY(300px);            300px ned  
+               transform: translateY(-300px);           300px opp
+              
+              transform: translate(-300px, -300px);     (X, Y)300px venstre og 300px opp
+                */
+            }
+
+            .scale:hover {
+                /* 
+                transform: scaleX(2);                   vil gjøre bildet dobbelt så langt
+                transform: scaleX(.5);                  vil gjøre bildet halvparten så stor
+                
+                transform: scaleY(2);                   vil gjøre bildet dobbelt så høyt
+                transform: scaleY(.5);                  vil gjøre bildet halvparten så høyt
+                
+                transform: scale(2, 2);                 (X, Y)vil gjøre bildet dobbelt så stort
+                */
+            }
+
+            .rotate:hover {
+                /*
+                transform: rotate(20deg);               roterer med klokka, minus vil gjøre eat den roterer mot klokka
+                transform: rotate(1turn);               roterer en runde, 360 grader med klokka. 
+                */
+            }
+
+            .skew:hover {
+                /* 
+                transform: skewX(30deg);                kan også bruke minus for at det blir andre veien.
+                transform: skewY(30deg);
+                transform: skew(30deg, 40deg);
+                */
+            }
+            .transform_origin:hover {
+                transform: rotate(45deg);   /*under bildet må man bruke transform-origin for å 
+                flytte hvor bildet roterer fra. man bruker verdier som: top, bottom, left, right, 
+                top-right, top-left, bottom-left, bottom-right eller prosent til høyre og til bunnen.*/
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <main>
+            <p>translate</p>
+            <img src="/assets/the_little_silver_poodle.JPG" class="translate">
+            <p>scale</p>
+            <img src="/assets/the_little_silver_poodle.JPG" class="scale">
+            <p>rotate</p>
+            <img src="/assets/the_little_silver_poodle.JPG" class="rotate">
+            <p>skew</p>
+            <img src="/assets/the_little_silver_poodle.JPG" class="skew">
+            <p>transform origin</p>
+            <img src="/assets/the_little_silver_poodle.JPG" class="transform_origin">
+        </main>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS animasjon-100 projects</title>
+        <meta name="Description" content="100 projects">
+        <style>
+            main {
+                perspective: 500px;  /*denne må være i containeren rundt det mman skal gi perspectiv til. 
+                slik at Z-aksen vet hvor lang den er.*/
+            }
+            
+            img {
+                width: 200px;
+                display: block;
+                margin: auto;
+                margin-top: 200px;
+                transition: transform 1s;
+            }
+
+            .z-aksen:hover {
+                transform: translateZ(-300px); /*300px mot deg på skjermen. minus gjør at det flytter seg fra deg. 
+                hvis man gir verdi over størrelsen av conteineren så forsvinner den, dette skjer fordi den "forsvinner 
+                forbi skjermen".*/
+            }
+
+           .rotate:hover {
+                /*transform: rotateZ(120deg);       Z er default verdi ved rotering. den roterer rundt Z-aksen, det samme skjer på Y og X rundt disse aksene*/
+                transform: rotateX(90deg);
+           }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <main>
+            <p>Z-aksen</p>
+            <img src="/assets/the_little_silver_poodle.JPG" class="z-aksen">
+            <img src="/assets/the_little_silver_poodle.JPG" class="rotate">
+        </main>
+    </body>
+</html>
