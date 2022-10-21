@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS animasjon-100 projects</title>
+        <meta name="Description" content="100 projects">
+        <style>
+            body {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                font-family: sans-serif;
+            }
+
+            .btn {
+                border: 2px solid tomato;
+                background: none;
+                color: tomato;
+                padding: 20px 40px;
+                font-size: 25px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.5s;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .btn:hover {
+                color: white;
+            }
+
+            .btn::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;    /* for å forandre hvilke retning den røde bakgrunnen 
+                kommer bytter man ut left til right eller top til bottom. avhengig 
+                av hvor man skal ha det fra.*/
+                width: 100%;
+                height: 100%;
+                background: tomato;
+                z-index: -1;
+                border-radius: 0 0 50% 50%;  /*bhved andre retninger må disse 
+                forandres til de hjørnene som skal ha avrundede sider.*/
+                height: 0%;
+                transition: all 0.5s;
+            }
+
+            .btn:hover::before {
+                height: 190%;
+            }
+
+            
+            
+        </style>
+    </head>
+    <body>
+     
+            <button class="btn">Button</button>
+        
+    </body>
+</html>
