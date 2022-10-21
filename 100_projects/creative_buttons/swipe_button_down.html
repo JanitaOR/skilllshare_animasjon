@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS animasjon-100 projects</title>
+        <meta name="Description" content="100 projects">
+        <style>
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #222;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-family: sans-serif;
+                font-size: 40px;
+                border: 3px solid white;
+                padding: 40px 80px;
+                position: relative;
+                transition: all 1s;
+                overflow: hidden;
+            }
+
+            a::before {
+                content: "YEAH!";
+                color: white;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #f44336;
+                
+                transform: translateY(-100%); /* 100% gjør at boksen kommer fra høyre til venstre*/
+                /*translateY vil gjøre at den kommer topp til bunn eller omvendt. 
+                translateX vil gjøre den fra høyre til venstre eller omvendt*/
+                transition: all 1s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            a:hover::before {
+                transform: translateX(0);
+                
+            }
+
+            a:hover {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+     
+            <a href="#">Hover Me</a>
+        
+    </body>
+</html>
